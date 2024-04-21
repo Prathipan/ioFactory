@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Max Profit Problem</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <h1>Max Profit Problem</h1>
-    <form id="profitForm">
-      <label for="timeUnit">Enter Time Unit:</label>
-      <input type="number" id="timeUnit" name="timeUnit" required>
-      <button type="submit">Calculate</button>
-    </form>
-    <div id="result"></div>
-  </div>
-  <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Max Profit Problem</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Max Profit Problem</h1>
+      <form id="profitForm">
+        <label for="timeUnit">Enter Time Unit:</label>
+        <input type="number" id="timeUnit" name="timeUnit" required />
+        <button type="submit">Calculate</button>
+      </form>
+      <div id="result">
+        <div class="maxEarnings">
+          <p>Max Earnings</p>
+          <p id="maxValue">0</p>
+        </div>
+        <div class="solution">
+          <div class="theater">
+            <p>Theater</p>
+            <p id="theaterNo">0</p>
+          </div>
+          <div class="pub">
+            <p>Pub</p>
+            <p id="pubNo">0</p>
+          </div>
+          <div class="park">
+            <p>Commerical Park</p>
+            <p id="parkNo">0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>

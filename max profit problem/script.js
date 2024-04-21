@@ -4,7 +4,12 @@ document
     event.preventDefault();
     var timeUnit = parseInt(document.getElementById("timeUnit").value);
     var result = maxProfit(timeUnit);
-    document.getElementById("result").innerText = result;
+    // console.log(result.maxEarnings)
+    document.getElementById("maxValue").innerText = result.maxEarnings;
+    document.getElementById("theaterNo").innerText = result.solution.T;
+    document.getElementById("pubNo").innerText = result.solution.P;
+    document.getElementById("parkNo").innerText = result.solution.C;
+
   });
 
 function maxProfit(timeUnit) {
@@ -73,5 +78,7 @@ function maxProfit(timeUnit) {
     }
   }
 
-  return `Earnings: $${maxEarnings}\nSolutions\n1. T: ${solution.T} P: ${solution.P} C: ${solution.C}`;
+  return {maxEarnings,solution}
+
+  // return `Earnings: $${maxEarnings}\nSolutions\n1. T: ${solution.T} P: ${solution.P} C: ${solution.C}`;
 }
